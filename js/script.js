@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   function toggleSection(section){
     $('.menu li').removeClass('active');
-    $(this).addClass('active');
+    $(section + "-btn").addClass('active');
     hideElement('section');
     show(section);
   }
