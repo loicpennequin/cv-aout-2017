@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>my CV</title>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Nothing+You+Could+Do|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="js/p5.min.js" charset="utf-8"></script>
@@ -33,26 +35,41 @@
       <nav class="menu hidden">
         <ul>
           <li class="active" id="aboutme-btn">
+            <span class="icon">
+              <i class="fa fa-user"></i>
+            </span>
             About Me
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
           <li id="skills-btn">
+            <span class="icon">
+              <i class="fa fa-cogs"></i>
+            </span>
             Skills
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
           <li id="experience-btn">
+            <span class="icon">
+              <i class="fa fa-graduation-cap"></i>
+            </span>
             Experience
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
           <li id="projects-btn">
+            <span class="icon">
+              <i class="fa fa-wrench"></i>
+            </span>
             Projects
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
           <li id="misc-btn">
+            <span class="icon">
+              <i class="fa fa-asterisk"></i>
+            </span>
             Miscellaneous
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
@@ -62,18 +79,36 @@
       </nav>
 
       <section id="aboutme" class="hidden">
-        <h2>About me.</h2>
-        <p class="presentation-text">
-          Hello and welcome to my resume. My name is Loïc Pennequin and I am (javascript-obsessed) fullstack web developer.
-        </p>
-        <p>After spending a few years learning foreign languages and other non web-related stuff, I discovered the joy of coding through
-          <a class="has-text-primary" href="http://pop.eu.com/popschoollens/">POP School Lens</a> and I haven't been able to let go of my computer ever since (Well, that
-          was already the case before, but you know what I'm saying).
-        </p>
-        <p>I thoroughly enoy creating pixel-perfect interfaces with intelligent design/user experiences. Although I have more affinities with front-end development, I also find
-        building back end solutions to my clients' needs very interesting. Nothing more satisfying to create a new project by yourself from A to Z, right ? Don't worry however, I have absolutely
-        no problem with working as a team and I will do my best to be the most accomodating and useful to any project or task I am given.</p>
-
+        <div class="section-content">
+          <h2>About me.</h2>
+          <p class="presentation-text">
+            Hello and welcome to my resume. My name is Loïc Pennequin and I am (javascript-obsessed) fullstack web developer.
+          </p>
+          <p>After spending a few years learning foreign languages and other non web-related stuff, I discovered the joy of coding through
+            <a class="has-text-primary" href="http://pop.eu.com/popschoollens/">POP School Lens</a> and I haven't been able to let go of my computer ever since (Well, that
+            was already the case before, but you know what I'm saying).
+          </p>
+          <p>I thoroughly enjoy creating pixel-perfect interfaces with intelligent design/user experiences. Although I have more affinities with front-end development, I also find
+            building back end solutions to my clients' needs very interesting. Nothing more satisfying to create a new project by yourself from A to Z, right ? Don't worry however, I have absolutely
+            no problem with working as a team and I will do my best to be the most accomodating and useful to any project or task I am given.
+          </p>
+          <p>Feel free to contact me by the following means : </p>
+          <a href="https://www.linkedin.com/in/lo%C3%AFc-pennequin-a90254133/" data-toggle="tooltip" title="LinkedIn">
+            <span class="icon is-large">
+              <i class="fa fa-linkedin-square"></i>
+            </span>
+          </a>
+          <a href="https://github.com/loicpennequin" data-toggle="tooltip" title="Github">
+            <span class="icon is-large">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          <a href="mailto:lo.pennequin@gmail.com" data-toggle="tooltip" title="lo.pennequin@gmail.com">
+            <span class="icon is-large">
+              <i class="fa fa-envelope-o"></i>
+            </span>
+          </a>
+        </div>
       </section>
 
       <section id="skills" class="hidden">

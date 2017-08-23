@@ -1,17 +1,19 @@
 $(document).ready(function(){
 
+  $('section.hidden').css("animation", "none");
+
   function show(el){
     $(el).removeClass('hidden').css('z-index', '5')
   };
 
-  function hide(el){
-    $(el).addClass('hidden').css('z-index', '1')
+  function hideElement(el){
+    $(el).addClass('hidden').css('z-index', '2')
   };
 
   function toggleSection(section){
     $('.menu li').removeClass('active');
     $(this).addClass('active');
-    hide('section');
+    hideElement('section');
     show(section);
   }
 
