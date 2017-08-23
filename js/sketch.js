@@ -1,27 +1,38 @@
-var img;
-
-function preload() {
-  img = loadImage("assets/header.jpg");
-}
+var particles = [];
 
 function setup(){
   var mycanvas = createCanvas((windowWidth-17), windowHeight);
   mycanvas.parent('header');
-  image(img, 0, 0);
 }
 
 function draw(){
-  clear();
-  image(img, 0, 0);
-  loadPixels();
-  var c = color(255,255,255,0)
-  for (var i = mouseX-60; i < mouseX+60 ; i++ ){
-    for (var j = mouseY-60 ; j < mouseY+60 ; j++){
-      if (dist(mouseX,mouseY, i,j) < 60) {
-        set(i, j, c)
-      }
+  clear()
+  noStroke();
+  particles.push(new Particle())
+  if ( particles.length > 100){
+    particles.splice(0,1);
+  }
+  particles.forEach(function(part){
+    part.update();
+    if(part.lifespan > 0) {
+      part.show();
     }
-  };
-  updatePixels()
+  })
+}
 
+function Particle(){
+  this.pos = createVector(mouseX + random(-30,30), mouseY + random(-30,30))
+  this.lifespan = 1;
+}
+
+Particle.prototype.update = function(){
+  this.lifespan -= 0.04
+  this.pos.x += random(-5,5)
+  this.pos.y += random(-5,5)
+}
+
+Particle.prototype.show = function(){
+  var opacity = map(this.lifespan, 1,0, 150,0);
+  fill(255,opacity)
+  ellipse(this.pos.x, this.pos.y, 10)
 }

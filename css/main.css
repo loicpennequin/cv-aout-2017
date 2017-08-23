@@ -4356,11 +4356,11 @@ header {
   top: 0;
   left: 0;
   font-family: "Poppins", cursive;
-  background-color: #242424;
+  background-color: #121212;
   height: 100vh;
   display: flex;
   align-items: center;
-  border-right: #121212 2px solid;
+  border-right: #b5b5b5 2px solid;
   transition: all 0.7s; }
   .menu.collapsed {
     transform: translateX(-90%); }
@@ -4389,7 +4389,7 @@ header {
       .menu ul li .border-bottom {
         bottom: 0; }
       .menu ul li:hover, .menu ul li.active {
-        background-color: #121212;
+        background-color: #0a0a0a;
         color: #dbdbdb; }
         .menu ul li:hover .border, .menu ul li.active .border {
           width: 100%;
@@ -4399,9 +4399,8 @@ header {
   .menu .arrow-btn {
     position: absolute;
     right: -30px;
-    background-color: #242424;
+    background-color: #121212;
     border-radius: 50%;
-    border: #121212 2px solid;
     transition: transform 1s; }
     .menu .arrow-btn:hover {
       filter: brightness(150%); }
@@ -4416,11 +4415,18 @@ section {
     opacity: 0; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 2; }
 
 html, body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0; }
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
 
 /*# sourceMappingURL=main.css.map */

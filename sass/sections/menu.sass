@@ -4,11 +4,11 @@
   top: 0
   left: 0
   font-family: 'Poppins', cursive
-  background-color: $black-ter
+  background-color: $black-bis
   height: 100vh
   display: flex
   align-items: center
-  border-right: $black-bis 2px solid
+  border-right: $grey-light 2px solid
   transition: all 0.7s
   &.collapsed
     transform: translateX(-90%)
@@ -39,7 +39,7 @@
       .border-bottom
         bottom: 0
       &:hover, &.active
-        background-color: $black-bis
+        background-color: $black
         color: $grey-lighter
         .border
           width: 100%
@@ -50,9 +50,8 @@
   .arrow-btn
     position: absolute
     right: -30px
-    background-color: $black-ter
+    background-color: $black-bis
     border-radius: 50%
-    border: $black-bis 2px solid
     transition: transform 1s
     &:hover
       filter: brightness(150%)
