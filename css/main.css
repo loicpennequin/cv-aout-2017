@@ -4313,7 +4313,8 @@ header {
     left: 0;
     width: 105%;
     height: 105%;
-    transition: opacity 0.5s; }
+    transition: opacity 0.5s;
+    z-index: 1; }
     header .header-bg.hidden {
       opacity: 0; }
   header .titre {
@@ -4408,9 +4409,10 @@ header {
     right: -30px;
     background-color: black;
     border-radius: 50%;
-    transition: transform 1s; }
+    transition: transform 1s;
+    filter: brightness(150%); }
     .menu .arrow-btn:hover {
-      filter: brightness(150%); }
+      filter: brightness(200%); }
     .menu .arrow-btn.flipped {
       transform: rotate(180DEG); }
 
@@ -4431,10 +4433,22 @@ section {
     opacity: 0;
     animation-name: section-switch;
     animation-duration: 1.5s; }
+  section h2 {
+    font-family: "Nothing You Could Do"; }
+  section h2, section h3 {
+    margin-bottom: 5px; }
   section a:hover {
     color: white; }
   section .section-content {
-    transform: rotate(-5DEG); }
+    transform: rotate(-5DEG) translateY(-20px);
+    font-family: "Poppins", cursive; }
+  section .skill-icon {
+    width: 40px; }
+  section .icon {
+    margin-top: 10px; }
+
+#experience li {
+  margin-bottom: 5px; }
 
 @keyframes section-switch {
   from {
@@ -4448,7 +4462,7 @@ section {
     opacity: 0; } }
 * {
   box-sizing: border-box;
-  z-index: 2; }
+  z-index: 3; }
 
 html, body {
   margin: 0;
@@ -4459,7 +4473,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  filter: blur(2px); }
+  z-index: 2;
+  filter: blur(2px) opacity(50%) hue-rotate(-40DEG); }
 
 /*# sourceMappingURL=main.css.map */

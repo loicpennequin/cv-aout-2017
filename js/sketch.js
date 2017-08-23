@@ -1,56 +1,43 @@
-var satellites = [];
+var drops = [];
 
 function setup(){
-  var mycanvas = createCanvas((windowWidth-17), windowHeight);
-  mycanvas.parent('header');
-  noStroke();
-  fill(255);
-  for(var i = 1; i < 20 ; i++){
-    satellites.push(new Satellite(random(width), random(height)))
-  }
+  var sketch = createCanvas(windowWidth, windowHeight);
+  sketch.parent('header');
+  colorMode(HSB);
 }
 
 function draw(){
-  clear()
-  satellites.forEach(function(sat){
-    sat.update();
-    sat.show();
-  })
-}
-
-function Satellite(x,y){
-  this.pos = createVector(x, y);
-  this.vel = createVector();
-  this.desire = createVector();
-  this.maxSpeed = 6;
-  this.maxForce = 1;
-  this.history = [];
-  this.target = createVector(random(width), random(height))
-}
-
-Satellite.prototype.update = function(){
-  this.history.push(createVector(this.pos.x, this.pos.y))
-   if (this.history.length > 30) {
-       this.history.splice(0,1)
-   }
-
-  this.desire = createVector(this.target.x, this.target.y).sub(this.pos);
-  var steer = this.desire.sub(this.vel);
-  steer.limit(this.maxForce);
-  this.vel.add(steer);
-  this.vel.setMag(this.maxSpeed)
-  this.pos.add(this.vel);
-  if (dist(this.pos.x, this.pos.y, this.target.x, this.target.y) < 10){
-    this.target = createVector(random(width), random(height))
+  clear();
+  drops.push(new Drop(mouseX, mouseY))
+  for (let i = 0; i < drops.length ; i ++){
+    drop = drops[i];
+    if (drop.lifespan >= 0){
+      drop.update();
+      drop.show();
+    }
   }
 }
 
-Satellite.prototype.show = function(){
-  fill(255);
-  for (var i = 0 ; i < this.history.length ; i ++) {
-    fill(255, map(i,0,this.history.length, 0, 100));
-    pos = this.history[i];
-    ellipse(pos.x, pos.y, i/3  );
-  }
-  fill(255,0,0);
+function Drop(x,y){
+  this.pos = createVector(x,y)
+  this.lifespan = 1
+}
+
+Drop.prototype.update = function(){
+  this.lifespan -= 0.02
+}
+
+Drop.prototype.show = function(){
+  let radius = map(this.lifespan, 1, 0, 30, 0)
+  let hue = map(this.pos.x, 0, windowWidth, 0, 255)
+  noStroke();
+  fill(hue,100,100,this.lifespan);
+  ellipse(this.pos.x, this.pos.y, radius)
+}
+
+function Satellite(x,y, speed, force){
+  this.pos = createVector(x,y);
+  this.vel = createVector(0,0);
+  this.maxSpeed = speed;
+  this.maxForce = force;
 }

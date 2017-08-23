@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="js/p5.min.js" charset="utf-8"></script>
-    <!-- <script src="js/sketch.js" charset="utf-8"></script> -->
+    <script src="js/sketch.js" charset="utf-8"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -29,7 +29,7 @@
       <div class="titre">
         <h1>Loïc Pennequin</h1>
         <h2>Developpeur Web</h2>
-        <button class="button is-primary is-outlined">Read more...</button>
+        <button class="theme button is-primary is-outlined">Read more...</button>
       </div>
 
       <nav class="menu hidden">
@@ -85,7 +85,7 @@
             Hello and welcome to my resume. My name is Loïc Pennequin and I am (javascript-obsessed) fullstack web developer.
           </p>
           <p>After spending a few years learning foreign languages and other non web-related stuff, I discovered the joy of coding through
-            <a class="has-text-primary" href="http://pop.eu.com/popschoollens/">POP School Lens</a> and I haven't been able to let go of my computer ever since (Well, that
+            <a class="theme has-text-primary" href="http://pop.eu.com/popschoollens/">POP School Lens</a> and I haven't been able to let go of my computer ever since (Well, that
             was already the case before, but you know what I'm saying).
           </p>
           <p>I thoroughly enjoy creating pixel-perfect interfaces with intelligent design/user experiences. Although I have more affinities with front-end development, I also find
@@ -93,17 +93,17 @@
             no problem with working as a team and I will do my best to be the most accomodating and useful to any project or task I am given.
           </p>
           <p>Feel free to contact me by the following means : </p>
-          <a href="https://www.linkedin.com/in/lo%C3%AFc-pennequin-a90254133/" data-toggle="tooltip" title="LinkedIn">
+          <a class="theme" href="https://www.linkedin.com/in/lo%C3%AFc-pennequin-a90254133/" data-toggle="tooltip" title="LinkedIn">
             <span class="icon is-large">
               <i class="fa fa-linkedin-square"></i>
             </span>
           </a>
-          <a href="https://github.com/loicpennequin" data-toggle="tooltip" title="Github">
+          <a class="theme" href="https://github.com/loicpennequin" data-toggle="tooltip" title="Github">
             <span class="icon is-large">
               <i class="fa fa-github"></i>
             </span>
           </a>
-          <a href="mailto:lo.pennequin@gmail.com" data-toggle="tooltip" title="lo.pennequin@gmail.com">
+          <a class="theme" href="mailto:lo.pennequin@gmail.com" data-toggle="tooltip" title="lo.pennequin@gmail.com">
             <span class="icon is-large">
               <i class="fa fa-envelope-o"></i>
             </span>
@@ -112,19 +112,129 @@
       </section>
 
       <section id="skills" class="hidden">
-        <h2>Skills.</h2>
+        <div class="section-content">
+          <h2>Skills.</h2>
+          <div class="columns">
+            <div class="column is-4 text-center">
+              <h3>Langages</h3>
+              <ul>
+                <li>
+                  <img class="skill-icon" src="assets/html.svg" alt="logo html">
+                  HTML5
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/css.svg" alt="logo css">
+                  CSS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/js.svg" alt="logo javascript">
+                  Javascript
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/mysql.svg" alt="logo mysql">
+                  mySQL
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/php.svg" alt="logo php">
+                  PHP
+                </li>
+              </ul>
+            </div>
+
+            <div class="column is-4 text-center">
+              <h3>Frameworks/libraries</h3>
+              <ul>
+                <li>
+                  <img class="skill-icon" src="assets/bootstrap.svg" alt="logo bootstrap">
+                  Bootstrap
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/jquery.svg" alt="logo jquery">
+                  jQuery
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/angular.svg" alt="logo angular">
+                  AngularJS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/nodejs.svg" alt="logo nodejs">
+                  nodeJS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/express.svg" alt="logo express">
+                  Express
+                </li>
+              </ul>
+            </div>
+
+            <div class="column is-4 text-center">
+              <h3>Others</h3>
+              <ul>
+                <li>
+                  <img class="skill-icon" src="assets/git.svg" alt="logo git">
+                  Git
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/sass.svg" alt="logo sass">
+                  Sass
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/p5.png" alt="logo p5">
+                  p5.js
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/photoshop.svg" alt="logo html">
+                  Photoshop
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
       </section>
 
       <section id="experience" class="hidden">
-        <h2>Experience.</h2>
+        <div class="section-content">
+          <h2>Experience.</h2>
+          <ul>
+            <li>
+              <span class="theme has-text-primary"> April 2017 - July 2017 :</span> front-end developer internship at <a class="theme" href="http://www.alt-ecom.net/">ALT-ECOM</a>, Villeneuve d'ascq
+            </li>
+            </hr>
+            <li>
+              <span class="theme has-text-primary">November 2014 - March 2015 :</span> Receptionnist at Furet du Nord, Lille
+            </li>
+            </hr>
+            <li>
+              <span class="theme has-text-primary">Summer 2008,2009 and 2010 :</span> mailman/supplies transporter at Société de Secours Minière du Pas-de-Calais</h4>
+            </li>
+            </hr>
+            <li>
+              <span class="theme has-text-primary">Forever :</span> way, way too much time spent on the internet.
+            </li>
+          </ul>
+          <br />
+          <h2>Education.</h2>
+          <ul>
+            <li><span class="theme has-text-primary">novembre 2016 - mai2017 :</span> Formation développeur d'applications web/mobile à POP School Lens</li>
+            <li><span class="theme has-text-primary">septembre 2011 - juillet 2014 :</span> Licence Langues,Litteratures et Cultures Etrangères mention Anglais</li>
+            <li><span class="theme has-text-primary">septembre 2010 - juillet 2011 :</span> Première année de Sciences de l'Education spécialité Français Langue Etrangère</li>
+            <li><span class="theme has-text-primary">septembre 2006 - juillet 2010 :</span> Licence Langues,Litteratures et Cultures Etrangères mention Japonais</li>
+            <li><span class="theme has-text-primary">juillet 2005 :</span> Baccalauréat S option Sciences de l'Ingénieur</li>
+          </ul>
+        </div>
       </section>
 
       <section id="projects" class="hidden">
-        <h2>Projects.</h2>
+        <div class="section-content">
+          <h2>Projects.</h2>
+        </div>
       </section>
 
       <section id="misc" class="hidden">
-        <h2>Miscellaneous.</h2>
+        <div class="section-content">
+          <h2>Miscellaneous.</h2>
+        </div>
       </section>
 
     </header>

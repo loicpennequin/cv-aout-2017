@@ -66,13 +66,13 @@ $(document).ready(function(){
     $('#header-bg' + img).removeClass('hidden')
     if (img == 1){
       $('.titre button').removeClass('is-warning').removeClass('is-info').addClass('is-primary');
-      $('a').removeClass('has-text-warning').removeClass('has-text-info').addClass('has-text-primary');
+      $('.theme').removeClass('has-text-warning').removeClass('has-text-info').addClass('has-text-primary');
     } else if (img == 2){
       $('.titre button').removeClass('is-primary').removeClass('is-warning').addClass('is-info');
-      $('a').removeClass('has-text-primary').removeClass('has-text-warning').addClass('has-text-info');
+      $('.theme').removeClass('has-text-primary').removeClass('has-text-warning').addClass('has-text-info');
     } else {
       $('.titre button').removeClass('is-primary').removeClass('is-info').addClass('is-warning');
-      $('a').removeClass('has-text-primary').removeClass('has-text-info').addClass('has-text-warning');
+      $('.theme').removeClass('has-text-primary').removeClass('has-text-info').addClass('has-text-warning');
     }
   })
 })
