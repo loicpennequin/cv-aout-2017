@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="js/p5.min.js" charset="utf-8"></script>
-    <script src="js/sketch.js" charset="utf-8"></script>
+    <!-- <script src="js/sketch.js" charset="utf-8"></script> -->
     <script src="js/script.js"></script>
   </head>
   <body>
 
     <header id="header">
 
-      <div class="bg-picker-wrapper">
+      <img src="assets/header1.jpg" class="header-bg" id="header-bg1">
+      <img src="assets/header2.jpg" class="header-bg hidden" id="header-bg2">
+      <img src="assets/header3.jpg" class="header-bg hidden" id="header-bg3">
+
+      <div class="bg-picker-wrapper has-text-centered">
         <button class='button is-dark bg-picker-btn active'>1</button>
         <button class='button is-dark bg-picker-btn'>2</button>
-        <button class='button is-dark bg-picker-btn'>3</button>
+        <button class='button is-dark bg-picker-btn'>3</button> <br />
       </div>
 
       <div class="titre">
@@ -59,6 +63,17 @@
 
       <section id="aboutme" class="hidden">
         <h2>About me.</h2>
+        <p class="presentation-text">
+          Hello and welcome to my resume. My name is Loïc Pennequin and I am (javascript-obsessed) fullstack web developer.
+        </p>
+        <p>After spending a few years learning foreign languages and other non web-related stuff, I discovered the joy of coding through
+          <a class="has-text-primary" href="http://pop.eu.com/popschoollens/">POP School Lens</a> and I haven't been able to let go of my computer ever since (Well, that
+          was already the case before, but you know what I'm saying).
+        </p>
+        <p>I thoroughly enoy creating pixel-perfect interfaces with intelligent design/user experiences. Although I have more affinities with front-end development, I also find
+        building back end solutions to my clients' needs very interesting. Nothing more satisfying to create a new project by yourself from A to Z, right ? Don't worry however, I have absolutely
+        no problem with working as a team and I will do my best to be the most accomodating and useful to any project or task I am given.</p>
+
       </section>
 
       <section id="skills" class="hidden">

@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   function show(el){
-    $(el).removeClass('hidden')
+    $(el).removeClass('hidden').css('z-index', '5')
   };
 
   function hide(el){
-    $(el).addClass('hidden')
+    $(el).addClass('hidden').css('z-index', '1')
   };
 
   function toggleSection(section){
@@ -18,10 +18,13 @@ $(document).ready(function(){
   //show content
   $('.titre button').click(function(){
     $('.titre').addClass('fadeoutTop');
-    setTimeout(function(){
+    setTimeout(()=>{
       show('.menu');
       show('#aboutme');
     }, 500);
+    setTimeout(()=>{
+      $('.titre').css('display', 'none')
+    }, 1500);
 
   });
 
@@ -52,25 +55,22 @@ $(document).ready(function(){
     toggleSection('#misc');
   });
 
-  //background change
+  //theme change
   $('.bg-picker-btn').click(function(){
     var img = $(this).text()
     $('.bg-picker-btn').removeClass('active');
     $(this).addClass('active');
-    $('header').css("background-image", "linear-gradient(black, rgba(0,0,0,0), black),  url('assets/header" + img + ".jpg')");
-    $('header').css("background-position", "center")
+    $('.header-bg').addClass('hidden');
+    $('#header-bg' + img).removeClass('hidden')
     if (img == 1){
-      $('.titre button').removeClass('is-warning');
-      $('.titre button').removeClass('is-info');
-      $('.titre button').addClass('is-primary');
+      $('.titre button').removeClass('is-warning').removeClass('is-info').addClass('is-primary');
+      $('a').removeClass('has-text-warning').removeClass('has-text-info').addClass('has-text-primary');
     } else if (img == 2){
-      $('.titre button').removeClass('is-primary');
-      $('.titre button').removeClass('is-warning');
-      $('.titre button').addClass('is-info');
+      $('.titre button').removeClass('is-primary').removeClass('is-warning').addClass('is-info');
+      $('a').removeClass('has-text-primary').removeClass('has-text-warning').addClass('has-text-info');
     } else {
-      $('.titre button').removeClass('is-primary');
-      $('.titre button').removeClass('is-info');
-      $('.titre button').addClass('is-warning');
+      $('.titre button').removeClass('is-primary').removeClass('is-info').addClass('is-warning');
+      $('a').removeClass('has-text-primary').removeClass('has-text-info').addClass('has-text-warning');
     }
   })
 })

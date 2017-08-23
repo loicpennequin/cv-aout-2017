@@ -4302,19 +4302,26 @@ label.panel-block {
 header {
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(black, transparent, black), url("../assets/header1.jpg");
-  background-blend-mode: luminosity;
-  background-position: center;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   transition: background-image 1s; }
+  header .header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    transition: opacity 0.5s; }
+    header .header-bg.hidden {
+      opacity: 0; }
   header .titre {
     color: #ebebeb;
     text-shadow: 3px 3px #363636;
-    font-family: "Nothing You Could Do", cursive; }
+    font-family: "Nothing You Could Do", cursive;
+    position: relative;
+    z-index: 3; }
     header .titre h1 {
       font-size: 4.5em; }
     header .titre h2 {
@@ -4331,7 +4338,8 @@ header {
   right: 0;
   padding: 30px; }
   .bg-picker-wrapper .bg-picker-btn {
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-bottom: 10px; }
     .bg-picker-wrapper .bg-picker-btn.active {
       box-shadow: 0 0 5px white; }
 
@@ -4409,10 +4417,17 @@ header {
 
 section {
   position: absolute;
+  width: 50%;
   color: #ebebeb;
-  transition: all 0.5s; }
+  transition: all 1s;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 0 black; }
   section.hidden {
     opacity: 0; }
+  section a:hover {
+    color: white; }
 
 * {
   box-sizing: border-box;
@@ -4421,12 +4436,13 @@ section {
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; }
+  background-color: #0a0a0a; }
 
 canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 1;
+  filter: blur(2px); }
 
 /*# sourceMappingURL=main.css.map */
