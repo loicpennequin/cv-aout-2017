@@ -13,42 +13,69 @@
   <body>
 
     <header id="header">
+
+      <div class="bg-picker-wrapper">
+        <button class='button is-dark bg-picker-btn active'>1</button>
+        <button class='button is-dark bg-picker-btn'>2</button>
+        <button class='button is-dark bg-picker-btn'>3</button>
+      </div>
+
       <div class="titre">
         <h1>Loïc Pennequin</h1>
         <h2>Developpeur Web</h2>
         <button class="button is-primary is-outlined">Read more...</button>
       </div>
 
-      <div class="menu hidden">
+      <nav class="menu hidden">
         <ul>
-          <li class="active">
+          <li class="active" id="aboutme-btn">
             About Me
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
-          <li>
+          <li id="skills-btn">
             Skills
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
-          <li>
+          <li id="experience-btn">
             Experience
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
-          <li>
+          <li id="projects-btn">
             Projects
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
-          <li>
+          <li id="misc-btn">
             Miscellaneous
             <div class="border border-top"></div>
             <div class="border border-bottom"></div>
           </li>
         </ul>
         <img src="assets/arrow-menu.png" class="arrow-btn flipped" alt="" />
-      </div>
+      </nav>
+
+      <section id="aboutme" class="hidden">
+        <h2>About me.</h2>
+      </section>
+
+      <section id="skills" class="hidden">
+        <h2>Skills.</h2>
+      </section>
+
+      <section id="experience" class="hidden">
+        <h2>Experience.</h2>
+      </section>
+
+      <section id="projects" class="hidden">
+        <h2>Projects.</h2>
+      </section>
+
+      <section id="misc" class="hidden">
+        <h2>Miscellaneous.</h2>
+      </section>
 
     </header>
 

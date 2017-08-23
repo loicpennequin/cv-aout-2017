@@ -1,7 +1,7 @@
 header
   height: 100vh
   overflow: hidden
-  background: linear-gradient(black, rgba(0,0,0,0), black),  url('../assets/header.jpg')
+  background-image: linear-gradient(black, rgba(0,0,0,0), black),  url('../assets/header1.jpg')
   background-blend-mode: luminosity
   background-position: center
   background-size: cover
@@ -9,6 +9,7 @@ header
   align-items: center
   justify-content: center
   position: relative
+  transition: background-image 1s
   .titre
     color: $white-ter
     text-shadow: 3px 3px $dark
@@ -22,6 +23,16 @@ header
       font-size: 1.3em
       margin-top: 10px
       transition: all 0.5s
+
+.bg-picker-wrapper
+  position: absolute
+  top: 0
+  right: 0
+  padding: 30px
+  .bg-picker-btn
+    margin-right: 5px
+    &.active
+      box-shadow: 0 0 5px $white
 
 
 .fadeoutTop
