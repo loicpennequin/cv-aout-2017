@@ -4450,6 +4450,33 @@ section {
 #experience li {
   margin-bottom: 5px; }
 
+.project {
+  position: relative;
+  overflow: hidden; }
+  .project:hover .legend {
+    transform: none;
+    opacity: 1; }
+  .project img {
+    width: 100%;
+    filter: grayscale(100%);
+    border: solid #ebebeb 2px; }
+
+.legend {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: calc(100% - 38px);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(115%, 115%);
+  opacity: 0;
+  transition: all 0.5s;
+  font-size: 1em;
+  padding: 5px; }
+
 @keyframes section-switch {
   from {
     transform: translateY(-50%) rotate(5DEG);
