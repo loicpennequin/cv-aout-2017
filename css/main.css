@@ -4322,7 +4322,7 @@ header {
     text-shadow: 3px 3px #363636;
     font-family: "Nothing You Could Do", cursive;
     position: relative;
-    z-index: 3; }
+    z-index: 10; }
     header .titre h1 {
       font-size: 4.5em; }
     header .titre h2 {
