@@ -1,0 +1,60 @@
+.menu
+  color: $grey-light
+  position: fixed
+  top: 0
+  left: 0
+  font-family: 'Poppins', cursive
+  background-color: $black-ter
+  height: 100vh
+  display: flex
+  align-items: center
+  border-right: $black-bis 2px solid
+  transition: all 0.7s
+  &.collapsed
+    transform: translateX(-90%)
+  &.hidden
+    transform: translateX(-150%)
+
+  ul
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 80vh
+
+    li
+      font-size: 1.3em
+      padding: 15px 50px
+      transition: all 0.3s
+      position: relative
+      .border
+        background-color: $white-ter
+        position: absolute
+        left: 50%
+        height: 1px
+        width: 0
+        transition: all 0.3s
+        opacity: 0
+      .border-top
+        top: 0
+      .border-bottom
+        bottom: 0
+      &:hover, &.active
+        background-color: $black-bis
+        color: $grey-lighter
+        .border
+          width: 100%
+          left: 0
+          opacity: 1
+          box-shadow: 0 0 3px $white-ter
+
+  .arrow-btn
+    position: absolute
+    right: -30px
+    background-color: $black-ter
+    border-radius: 50%
+    border: $black-bis 2px solid
+    transition: transform 1s
+    &:hover
+      filter: brightness(150%)
+    &.flipped
+      transform: rotate(180DEG)
