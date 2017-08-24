@@ -4,7 +4,7 @@
   top: 0
   left: 0
   font-family: 'Poppins', cursive
-  background-color: rgba(0,0,0,0.75)
+  background-color: rgba(0,0,0,0.85)
   height: 100vh
   display: flex
   align-items: center
@@ -13,6 +13,8 @@
     transform: translateX(-95%)
   &.hidden
     transform: translateX(-150%)
+  +mobile
+    display: none
 
   ul
     display: flex
@@ -58,3 +60,28 @@
       filter: brightness(200%)
     &.flipped
       transform: rotate(180DEG)
+
+
+
+.mobile-nav
+  background-color: $black-ter
+  overflow: hidden
+  color: $white-bis
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  padding: 10px
+  .fa
+    font-size: 3em
+  ul
+    display: none
+  li
+    font-size: 1.3em
+    padding: 20px
+    a
+      color: $white-bis
+    &:hover
+      background-color: $black
+    .fa
+      font-size: 1.3em

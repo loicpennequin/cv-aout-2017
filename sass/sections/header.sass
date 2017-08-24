@@ -1,15 +1,12 @@
 header
   height: 100vh
-  overflow: hidden
-  // background-image: linear-gradient(black, rgba(0,0,0,0), black),  url('../assets/header1.jpg')
-  // background-blend-mode: luminosity
-  // background-position: center
-  // background-size: cover
-  display: flex
-  align-items: center
-  justify-content: center
   position: relative
   transition: background-image 1s
+  +desktop
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
   .header-bg
     position: absolute
     top: 0
@@ -18,6 +15,8 @@ header
     height: 105%
     transition: opacity 0.5s
     z-index: 1
+    +mobile
+      display: none
     &.hidden
       opacity: 0
   .titre
@@ -26,21 +25,33 @@ header
     font-family: 'Nothing You Could Do', cursive
     position: relative
     z-index: 10
+    +mobile
+      text-align: center
+      margin-top: 200px
+
     h1
       font-size: 4.5em
+      +mobile
+        font-size: 2em
     h2
       font-size: 2.8em
+      +mobile
+        font-size: 1.5em
     button
       font-family: 'Baloo Bhaijaan', cursive
       font-size: 1.3em
       margin-top: 10px
       transition: all 0.5s
+      +mobile
+
 
 .bg-picker-wrapper
   position: absolute
   top: 0
   right: 0
   padding: 30px
+  +mobile
+    display: none
   .bg-picker-btn
     margin-right: 5px
     margin-bottom: 10px

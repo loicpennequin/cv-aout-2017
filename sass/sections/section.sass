@@ -3,27 +3,39 @@ section
   width: 50%
   color: $white-ter
   transition: all 1s
-  background-color: rgba(0,0,0,0.75)
+  background-color: rgba(0,0,0,0.85)
   padding: 60px 100px
   border-radius: 10px
   box-shadow: 0 10px 10px 0 black
   top: 50%
   transform: translateY(-50%) rotate(5DEG)
   opacity: 1
+  +mobile
+    width: 100%
+    transform: none
+    position: relative
+    padding: 0
   &.hidden
-    top: 100%
-    opacity: 0
-    animation-name: section-switch
-    animation-duration: 1.5s
+    +desktop
+      top: 100%
+      opacity: 0
+      animation-name: section-switch
+      animation-duration: 1.5s
   h2
     font-family: 'Nothing You Could Do'
+    +mobile
+      background-color: $primary
+      padding-left: 15px
   h2, h3
     margin-bottom: 5px
   a:hover
     color: white
   .section-content
-    transform: rotate(-5DEG) translateY(-20px)
     font-family: 'Poppins', cursive
+    +desktop
+      transform: rotate(-5DEG) translateY(-20px)
+    +mobile
+      padding: 25px
   .skill-icon
     width: 40px
   .icon
@@ -32,6 +44,11 @@ section
 #experience
   li
     margin-bottom: 5px
+
+#skills
+  li
+    +mobile
+      text-align: center
 
 .project
   position: relative
@@ -50,8 +67,8 @@ section
   top: 14px
   left: 14px
   width: calc(100% - 28px)
-  height: calc(100% - 38px)
-  background-color: rgba(0,0,0,0.7)
+  height: calc(100% - 34px)
+  background-color: rgba(0,0,0,0.8)
   display: flex
   justify-content: center
   align-items: center
@@ -60,6 +77,9 @@ section
   transition: all 0.5s
   font-size: 1em
   padding: 5px
+  +mobile
+    transform: none
+    opacity: 1
 
 @keyframes section-switch
   from

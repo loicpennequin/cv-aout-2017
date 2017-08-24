@@ -14,6 +14,54 @@
   </head>
   <body>
 
+    <nav class="mobile-nav has-text-right">
+      <div>
+      <i class="fa fa-bars fa-5x"></i>
+      </div>
+      <ul class="has-text-left">
+        <li class="active" id="aboutme-btn">
+          <a href="#aboutme">
+            <span class="icon">
+              <i class="fa fa-user"></i>
+            </span>
+            About Me
+          </a>
+        </li>
+        <li id="skills-btn">
+          <a href="#skills">
+            <span class="icon">
+              <i class="fa fa-cogs"></i>
+            </span>
+            Skills
+          </a>
+        </li>
+        <li id="experience-btn">
+          <a href="#experience">
+            <span class="icon">
+              <i class="fa fa-graduation-cap"></i>
+            </span>
+            Experience
+          </a>
+        </li>
+        <li id="projects-btn">
+          <a href="#projects">
+            <span class="icon">
+              <i class="fa fa-wrench"></i>
+            </span>
+            Projects
+          </a>
+        </li>
+        <li id="misc-btn">
+          <a href="#misc">
+            <span class="icon">
+              <i class="fa fa-asterisk"></i>
+            </span>
+            Miscellaneous
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <header id="header">
 
       <img src="assets/header1.jpg" class="header-bg" id="header-bg1">
@@ -29,7 +77,8 @@
       <div class="titre">
         <h1>Loïc Pennequin</h1>
         <h2>Developpeur Web</h2>
-        <button class="theme button is-primary is-outlined">Read more...</button>
+        <button class="theme button is-primary is-hidden-mobile" id="show-content">Read more...</button>
+        <a href="#aboutme"><button class="theme button is-primary is-hidden-tablet">Read more...</button></a>
       </div>
 
       <nav class="menu hidden">
@@ -114,8 +163,8 @@
       <section id="skills" class="hidden">
         <div class="section-content">
           <h2>Skills.</h2>
-          <div class="columns">
-            <div class="column is-4 text-center">
+          <div class="columns is-mobile is-multiline">
+            <div class="column is-4-desktop text-center">
               <h3>Langages</h3>
               <ul>
                 <li>
@@ -141,7 +190,7 @@
               </ul>
             </div>
 
-            <div class="column is-4 text-center">
+            <div class="column is-4-desktop text-center">
               <h3>Frameworks/libraries</h3>
               <ul>
                 <li>
@@ -167,7 +216,7 @@
               </ul>
             </div>
 
-            <div class="column is-4 text-center">
+            <div class="column is-4-desktop text-center">
               <h3>Others</h3>
               <ul>
                 <li>
